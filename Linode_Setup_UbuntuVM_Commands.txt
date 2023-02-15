@@ -1,0 +1,29 @@
+Run Commands In WebLish:
+1)
+In root:
+apt update 
+apt dist-upgrade -y
+
+2)Create new user & passwd
+sudo useradd -m -d /opt/username username
+passwd username
+3) In new user make super user
+su -s /bin/bash <username>
+
+Switch user:
+su -l root 
+
+In root:
+usermod -aG sudo,adm <username>
+
+Switch back to <username>:
+su -l <username>
+
+4) Install in user:
+ sudo apt install ubuntu-gnome-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+
+5) wget nomachine.deb
+sudo wget https://download.nomachine.com/download/8.3/Linux/nomachine_8.3.1_1_amd64.deb
+
+6) install nomachine
+sudo apt install -f ./nomachine_8.3.1_1_amd64.deb
